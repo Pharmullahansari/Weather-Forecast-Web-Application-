@@ -1,0 +1,203 @@
+# 🌤️ Full Stack Weather Forecast Application  
+### React.js (Frontend) + Spring Boot (Backend)
+
+A fully functional full-stack Weather Forecast web application that fetches real-time weather data using the OpenWeather API.  
+Designed with a modern UI, responsive layout, and a clean backend structure.
+
+---
+
+# 🔰 Tech Stack
+
+### 🖥️ Frontend
+- ⚛️ React.js  
+- 🎨 CSS3  
+- 🔄 Fetch API  
+- 📦 JavaScript (ES6)
+
+### 💻 Backend
+- ☕ Java 17+  
+- 🌱 Spring Boot  
+- 🔧 Maven  
+- ☁ OpenWeather API  
+
+---
+
+# 📁 Project Structure
+
+```
+Serverside project/
+│
+├── weather                # Spring Boot backend
+│   ├── controller
+│   ├── service
+│   ├── model
+│   ├── WeatherApplication.java
+│   ├── application.properties
+│   └── pom.xml
+│
+├── weather-frontend       # React frontend
+│   ├── src
+│   │   ├── App.js
+│   │   ├── App.css
+│   │   └── WeatherApp.jsx
+│   ├── public
+│   ├── package.json
+│   └── package-lock.json
+│
+└── README.md
+```
+
+---
+
+# 🚀 Setup Instructions
+
+## 🧩 Backend Setup (Spring Boot)
+
+1. **Go to backend folder**
+```bash
+cd weather
+```
+
+2. **Add your OpenWeather API key**  
+Inside:  
+```
+src/main/resources/application.properties
+```
+
+Add:
+```
+spring.application.name=weather
+server.port=8080
+weather.api.key=YOUR_API_KEY
+weather.api.url=https://api.openweathermap.org/data/2.5/weather
+weather.api.units=metric
+```
+
+3. **Run the backend**
+```bash
+mvn spring-boot:run
+```
+
+Backend available at:
+```
+http://localhost:8080
+```
+
+---
+
+## 🎯 Frontend Setup (React)
+
+1. **Go to frontend folder**
+```bash
+cd weather-frontend
+```
+
+2. **Install dependencies**
+```bash
+npm install
+```
+
+3. **Start React app**
+```bash
+npm start
+```
+
+Frontend running at:
+```
+http://localhost:3000
+```
+
+---
+
+# 🔗 API Workflow (Frontend → Backend → OpenWeather)
+
+```
+User Input
+    ↓
+React Frontend (Fetch API)
+    ↓
+Spring Boot Backend (/api/weather)
+    ↓
+OpenWeather API
+    ↓
+Backend Formats JSON
+    ↓
+React Displays Weather Data
+```
+
+### ✔ Example API Call
+```
+GET http://localhost:8080/api/weather?city=Delhi
+```
+
+### ✔ Example JSON Response
+```json
+{
+  "city": "Delhi",
+  "country": "IN",
+  "temperature": 28,
+  "feelsLike": 29,
+  "humidity": 62,
+  "pressure": 1014,
+  "windSpeed": 3.5,
+  "visibility": 5000,
+  "condition": "clear sky"
+}
+```
+
+---
+
+# 🖼️ Screenshot (Add Yours)
+
+Add an image in your folder and use:
+
+```
+![Weather App Screenshot](./image.png)
+```
+
+Or from frontend folder:
+
+```
+![UI](./weather-frontend/image.png)
+```
+
+---
+
+# 📌 Features Summary
+
+### 💻 Backend
+- Clean REST API  
+- Fast parsing of weather JSON  
+- Error handling for invalid cities  
+
+### 🖥️ Frontend
+- Real-time weather updates  
+- Modern UI / UX  
+- Loading indicator  
+- Responsive layout  
+- City-based search  
+
+---
+
+# 🚧 Future Enhancements
+- 7-day forecast  
+- GPS-based auto-location  
+- Dark/light theme  
+- Deployment on cloud (Render / Railway / AWS)  
+
+---
+
+# 🤝 Contribution Guidelines
+Pull requests are welcome.  
+For major updates, please open an issue first to discuss changes.
+
+---
+
+# 📄 License
+This project is for educational and learning purposes.
+
+---
+
+# ⭐ Author
+Developed by **Pharmullah Ansari**  
+Full Stack Weather Application – React + Spring Boot
